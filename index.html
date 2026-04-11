@@ -297,7 +297,7 @@
     .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    /* ===== BOUTIQUE PRODUITS ===== */
+    /* BOUTIQUE */
     .boutique { background: var(--dark2); }
     .boutique-header { text-align: center; margin-bottom: 60px; }
     .products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
@@ -346,19 +346,17 @@
     }
     .product-buy:hover { background: var(--gold-light); }
 
-    /* ===== EXEMPLES / DÉMOS ===== */
+    /* EXEMPLES */
     .exemples { background: var(--dark); }
     .exemples-header { text-align: center; margin-bottom: 60px; }
     .exemples-header .section-label { justify-content: center; }
     .exemples-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-    
     .exemple-card {
       background: var(--dark2); border: 1px solid rgba(255,255,255,0.05);
       border-radius: 8px; overflow: hidden;
       transition: border-color 0.3s ease, transform 0.3s ease;
     }
     .exemple-card:hover { border-color: rgba(var(--gold-rgb),0.3); transform: translateY(-8px); }
-    
     .exemple-header {
       padding: 24px; border-bottom: 1px solid rgba(255,255,255,0.05);
       display: flex; justify-content: space-between; align-items: center;
@@ -368,10 +366,7 @@
       font-size: 0.65rem; background: var(--gold); color: var(--dark);
       padding: 4px 10px; border-radius: 100px; font-weight: 600;
     }
-    
-    .exemple-preview {
-      padding: 16px; background: var(--dark3); min-height: 360px;
-    }
+    .exemple-preview { padding: 16px; background: var(--dark3); min-height: 360px; }
     .exemple-browser {
       background: #000; border-radius: 6px; overflow: hidden;
       box-shadow: 0 20px 60px rgba(0,0,0,0.5);
@@ -381,25 +376,22 @@
       display: flex; align-items: center; gap: 12px;
       border-bottom: 1px solid #333;
     }
-    .browser-dots {
-      display: flex; gap: 6px;
+    .browser-dots { display: flex; gap: 6px; align-items: center; }
+    .browser-dot {
+      width: 8px; height: 8px; border-radius: 50%;
     }
-    .browser-dots::before, .browser-dots::after {
-      content: ''; width: 8px; height: 8px; border-radius: 50%;
-      background: #555;
-    }
-    .browser-dots::before { background: #ff6b6b; }
-    .browser-dots::after { background: #51cf66; }
+    .browser-dot.red { background: #ff6b6b; }
+    .browser-dot.yellow { background: #ffd93d; }
+    .browser-dot.green { background: #51cf66; }
     .browser-url {
       font-size: 0.75rem; color: #999; font-family: monospace;
       flex: 1; text-align: center;
     }
-    
     .browser-content {
       padding: 20px; background: #f0f0f0; min-height: 300px;
       color: #000; overflow: hidden;
     }
-    
+
     /* LANDING PAGE DEMO */
     .landing-demo .lp-hero {
       text-align: center; padding: 24px;
@@ -416,9 +408,7 @@
     .cta-button:hover { background: var(--gold-light); }
     .landing-demo .lp-section { margin-bottom: 16px; }
     .landing-demo .lp-section h2 { font-size: 1.1rem; margin-bottom: 12px; }
-    .lp-features {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
-    }
+    .lp-features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
     .lp-feature {
       background: rgba(0,0,0,0.1); padding: 12px;
       border-radius: 4px; text-align: center; font-size: 0.85rem;
@@ -426,9 +416,7 @@
     .landing-demo .lp-cta { text-align: center; }
 
     /* PORTFOLIO DEMO */
-    .portfolio-demo {
-      background: #fafafa;
-    }
+    .portfolio-demo { background: #fafafa; }
     .portfolio-demo .pf-header {
       text-align: center; padding: 20px;
       background: var(--dark); color: var(--white);
@@ -449,9 +437,7 @@
     .portfolio-demo .pf-cta { text-align: center; }
 
     /* E-COMMERCE DEMO */
-    .ecommerce-demo {
-      background: #f8f8f8;
-    }
+    .ecommerce-demo { background: #f8f8f8; }
     .ecommerce-demo .ec-header {
       display: flex; justify-content: space-between; align-items: center;
       margin-bottom: 20px; padding-bottom: 16px; border-bottom: 2px solid #ddd;
@@ -469,13 +455,11 @@
       background: white; border: 1px solid #ddd; border-radius: 6px;
       padding: 12px; text-align: center;
     }
-    .ec-img {
-      font-size: 2.5rem; margin-bottom: 8px;
-    }
+    .ec-img { font-size: 2.5rem; margin-bottom: 8px; }
     .ec-product p { margin: 4px 0; font-size: 0.85rem; }
     .ec-price { color: var(--gold); font-weight: 700; }
     .ecommerce-demo .cta-button { width: 100%; }
-    
+
     .exemple-card .exemple-desc {
       padding: 16px 24px; font-size: 0.9rem;
       color: var(--muted); line-height: 1.6; border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -490,14 +474,13 @@
     }
     .exemple-btn:hover { background: rgba(var(--gold-rgb), 0.1); }
 
-    /* RESPONSIVE EXEMPLES */
-    @media (max-width: 1024px) {
-      .exemples-grid { grid-template-columns: repeat(2, 1fr); }
-    }
+    @media (max-width: 1024px) { .exemples-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 768px) {
       .exemples-grid { grid-template-columns: 1fr; }
       .exemple-preview { min-height: 280px; }
     }
+
+    /* MARQUEE */
     .marquee-section { padding: 28px 0; background: var(--gold); overflow: hidden; }
     .marquee-wrap { display: flex; width: max-content; }
     @media (prefers-reduced-motion: no-preference) {
@@ -548,15 +531,6 @@
     }
     .service-card h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; margin-bottom: 14px; }
     .service-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; font-weight: 300; }
-    .service-link {
-      display: inline-flex; align-items: center; gap: 8px;
-      color: var(--gold); font-size: 0.8rem; letter-spacing: 0.1em;
-      text-transform: uppercase; text-decoration: none; margin-top: 24px;
-      font-weight: 500; transition: gap 0.3s ease;
-      background: none; border: none; cursor: pointer;
-      font-family: 'Outfit', sans-serif; padding: 0;
-    }
-    .service-link:hover { gap: 14px; }
     .service-order-btn {
       margin-top: 10px; display: block; width: 100%;
       background: transparent; border: 1px solid rgba(var(--gold-rgb),0.25);
@@ -811,25 +785,29 @@
     .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
     .footer-col a { color: var(--muted); text-decoration: none; font-size: 0.88rem; transition: color 0.3s ease; }
     .footer-col a:hover { color: var(--white); }
+
+    /* FOOTER BOTTOM — icônes sociales bien en bas, centrées, séparées */
     .footer-bottom {
       border-top: 1px solid rgba(255,255,255,0.05);
-      padding-top: 28px;
+      padding-top: 32px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 24px;
       text-align: center;
     }
-  
     .footer-bottom p { font-size: 0.8rem; color: var(--muted); }
-    .social-links { display: flex; gap: 16px; }
+    .social-links { display: flex; gap: 16px; justify-content: center; }
     .social-link {
-      width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      font-size: 0.8rem; color: var(--muted); text-decoration: none;
-      transition: border-color 0.3s ease, color 0.3s ease;
+      width: 40px; height: 40px;
+      border: 1px solid rgba(var(--gold-rgb), 0.25);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--muted); text-decoration: none;
+      transition: border-color 0.3s ease, color 0.3s ease, background 0.3s ease;
     }
-    .social-link:hover { border-color: var(--gold); color: var(--gold); }
+    .social-link:hover { border-color: var(--gold); color: var(--gold); background: var(--gold-dim); }
+    .social-link svg { display: block; }
 
     /* TOAST */
     .toast {
@@ -885,7 +863,6 @@
 </head>
 <body>
 
-  <!-- CURSOR -->
   <div class="cursor" id="cursor" aria-hidden="true"></div>
   <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
 
@@ -935,9 +912,7 @@
         Nous accompagnons les PME ambitieuses vers leur plein potentiel — stratégie, identité visuelle, digital. Des solutions sur mesure qui font la différence.
       </p>
       <div class="hero-actions">
-        <a href="#" class="btn-primary open-order-btn" role="button">
-          <span>Passer commande</span>
-        </a>
+        <a href="#" class="btn-primary open-order-btn" role="button"><span>Passer commande</span></a>
         <a href="#services" class="btn-secondary">Découvrir nos services</a>
       </div>
     </div>
@@ -957,13 +932,13 @@
     </div>
   </section>
 
-  <!-- BOUTIQUE PRODUITS -->
+  <!-- BOUTIQUE -->
   <section class="boutique" id="boutique" aria-label="Boutique de produits">
     <div class="boutique-header reveal">
       <span class="section-label">Nos Produits</span>
       <h2 class="section-title">Templates <i>Premium</i></h2>
       <div class="gold-divider center"></div>
-      <p class="section-sub" style="margin: 0 auto">Des designs prêts à l'emploi. Achetez, personnalisez en 30 minutes, mettez en ligne.</p>
+      <p class="section-sub" style="margin:0 auto">Des designs prêts à l'emploi. Achetez, personnalisez en 30 minutes, mettez en ligne.</p>
     </div>
     <div class="products-grid">
       <div class="product-card product-featured reveal">
@@ -981,7 +956,6 @@
           </div>
         </div>
       </div>
-
       <div class="product-card reveal" style="transition-delay:.1s">
         <div class="product-img-wrap">
           <img src="https://images.unsplash.com/photo-1545670723-196ed0954986?w=700&q=80" alt="Portfolio créatif">
@@ -997,7 +971,6 @@
           </div>
         </div>
       </div>
-
       <div class="product-card reveal" style="transition-delay:.2s">
         <div class="product-img-wrap">
           <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&q=80" alt="Landing Page">
@@ -1012,7 +985,6 @@
           </div>
         </div>
       </div>
-
       <div class="product-card reveal" style="transition-delay:.3s">
         <div class="product-img-wrap">
           <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=700&q=80" alt="E-commerce">
@@ -1028,10 +1000,9 @@
           </div>
         </div>
       </div>
-
       <div class="product-card reveal" style="transition-delay:.4s">
         <div class="product-img-wrap">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&q=80" alt="Boutique en ligne custom">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&q=80" alt="Boutique custom">
           <span class="product-badge">Custom</span>
         </div>
         <div class="product-body">
@@ -1044,10 +1015,9 @@
           </div>
         </div>
       </div>
-
       <div class="product-card reveal" style="transition-delay:.5s">
         <div class="product-img-wrap">
-          <img src="https://images.unsplash.com/photo-1545670723-196ed0954986?w=700&q=80" alt="Portfolio professionnel">
+          <img src="https://images.unsplash.com/photo-1545670723-196ed0954986?w=700&q=80" alt="Portfolio pro">
           <span class="product-badge">Artistes</span>
         </div>
         <div class="product-body">
@@ -1063,17 +1033,16 @@
     </div>
   </section>
 
-  <!-- SECTION EXEMPLES / DÉMOS -->
+  <!-- EXEMPLES -->
   <section class="exemples" id="exemples" aria-label="Exemples et démonstrations">
     <div class="exemples-header reveal">
       <span class="section-label">Voir en action</span>
       <h2 class="section-title">Exemples de <i>sites</i></h2>
       <div class="gold-divider center"></div>
-      <p class="section-sub" style="margin: 0 auto">Découvre à quoi ressemblent les différents types de sites que nous créons.</p>
+      <p class="section-sub" style="margin:0 auto">Découvre à quoi ressemblent les différents types de sites que nous créons.</p>
     </div>
-
     <div class="exemples-grid">
-      <!-- LANDING PAGE EXAMPLE -->
+      <!-- LANDING PAGE -->
       <div class="exemple-card reveal">
         <div class="exemple-header">
           <h3>Landing Page</h3>
@@ -1082,7 +1051,11 @@
         <div class="exemple-preview">
           <div class="exemple-browser">
             <div class="browser-header">
-              <div class="browser-dots"></div>
+              <div class="browser-dots">
+                <span class="browser-dot red"></span>
+                <span class="browser-dot yellow"></span>
+                <span class="browser-dot green"></span>
+              </div>
               <div class="browser-url">www.votrelanding.com</div>
             </div>
             <div class="browser-content landing-demo">
@@ -1109,7 +1082,7 @@
         <button class="exemple-btn open-order-btn" data-service="ConvertX - Landing Ads">Voir le produit</button>
       </div>
 
-      <!-- PORTFOLIO EXAMPLE -->
+      <!-- PORTFOLIO -->
       <div class="exemple-card reveal" style="transition-delay:.1s">
         <div class="exemple-header">
           <h3>Portfolio</h3>
@@ -1118,13 +1091,17 @@
         <div class="exemple-preview">
           <div class="exemple-browser">
             <div class="browser-header">
-              <div class="browser-dots"></div>
+              <div class="browser-dots">
+                <span class="browser-dot red"></span>
+                <span class="browser-dot yellow"></span>
+                <span class="browser-dot green"></span>
+              </div>
               <div class="browser-url">www.tonportfolio.com</div>
             </div>
             <div class="browser-content portfolio-demo">
               <div class="pf-header">
                 <h1>Jean Dupont</h1>
-                <p>Designers & Créatif</p>
+                <p>Designer &amp; Créatif</p>
               </div>
               <div class="pf-gallery">
                 <div class="pf-item big">📸</div>
@@ -1142,7 +1119,7 @@
         <button class="exemple-btn open-order-btn" data-service="ShowCase - Portfolio">Voir le produit</button>
       </div>
 
-      <!-- BOUTIQUE EN LIGNE EXAMPLE -->
+      <!-- BOUTIQUE -->
       <div class="exemple-card reveal" style="transition-delay:.2s">
         <div class="exemple-header">
           <h3>Boutique en Ligne</h3>
@@ -1151,7 +1128,11 @@
         <div class="exemple-preview">
           <div class="exemple-browser">
             <div class="browser-header">
-              <div class="browser-dots"></div>
+              <div class="browser-dots">
+                <span class="browser-dot red"></span>
+                <span class="browser-dot yellow"></span>
+                <span class="browser-dot green"></span>
+              </div>
               <div class="browser-url">www.maboutique.shop</div>
             </div>
             <div class="browser-content ecommerce-demo">
@@ -1160,21 +1141,9 @@
                 <div class="ec-cart">🛒 Panier (2)</div>
               </div>
               <div class="ec-products">
-                <div class="ec-product">
-                  <div class="ec-img">📦</div>
-                  <p>Produit 1</p>
-                  <p class="ec-price">39€</p>
-                </div>
-                <div class="ec-product">
-                  <div class="ec-img">📦</div>
-                  <p>Produit 2</p>
-                  <p class="ec-price">49€</p>
-                </div>
-                <div class="ec-product">
-                  <div class="ec-img">📦</div>
-                  <p>Produit 3</p>
-                  <p class="ec-price">29€</p>
-                </div>
+                <div class="ec-product"><div class="ec-img">📦</div><p>Produit 1</p><p class="ec-price">39€</p></div>
+                <div class="ec-product"><div class="ec-img">📦</div><p>Produit 2</p><p class="ec-price">49€</p></div>
+                <div class="ec-product"><div class="ec-img">📦</div><p>Produit 3</p><p class="ec-price">29€</p></div>
               </div>
               <button class="cta-button">Passer la commande</button>
             </div>
@@ -1227,7 +1196,6 @@
         <p>Analyse de marché, positionnement et feuille de route actionnable pour atteindre vos objectifs à court et long terme.</p>
         <button class="service-order-btn open-order-btn" data-service="Stratégie d'entreprise">Commander</button>
       </article>
-
       <article class="service-card reveal" style="transition-delay:.1s">
         <span class="service-num" aria-hidden="true">02</span>
         <div class="service-icon" aria-hidden="true">🎨</div>
@@ -1235,7 +1203,6 @@
         <p>Logo, charte graphique, supports. Une identité cohérente et mémorable qui reflète vos valeurs et marque durablement.</p>
         <button class="service-order-btn open-order-btn" data-service="Identité visuelle">Commander</button>
       </article>
-
       <article class="service-card reveal" style="transition-delay:.2s">
         <span class="service-num" aria-hidden="true">03</span>
         <div class="service-icon" aria-hidden="true">💻</div>
@@ -1243,7 +1210,6 @@
         <p>Sites web, applications, e-commerce. Des solutions performantes et élégantes qui convertissent vos visiteurs.</p>
         <button class="service-order-btn open-order-btn" data-service="Développement digital">Commander</button>
       </article>
-
       <article class="service-card reveal" style="transition-delay:.1s">
         <span class="service-num" aria-hidden="true">04</span>
         <div class="service-icon" aria-hidden="true">📣</div>
@@ -1251,7 +1217,6 @@
         <p>Campagnes ciblées, réseaux sociaux, content marketing. Faites rayonner votre marque au bon moment.</p>
         <button class="service-order-btn open-order-btn" data-service="Marketing & Communication">Commander</button>
       </article>
-
       <article class="service-card reveal" style="transition-delay:.2s">
         <span class="service-num" aria-hidden="true">05</span>
         <div class="service-icon" aria-hidden="true">🏆</div>
@@ -1259,7 +1224,6 @@
         <p>Accompagnement personnalisé pour renforcer votre leadership et transformer votre vision en résultats concrets.</p>
         <button class="service-order-btn open-order-btn" data-service="Coaching dirigeants">Commander</button>
       </article>
-
       <article class="service-card reveal" style="transition-delay:.3s">
         <span class="service-num" aria-hidden="true">06</span>
         <div class="service-icon" aria-hidden="true">⚡</div>
@@ -1319,7 +1283,7 @@
       <span class="section-label">Portfolio</span>
       <h2 class="section-title">Nos <i>réalisations</i></h2>
       <div class="gold-divider center"></div>
-      <p class="section-sub" style="margin: 0 auto">Des projets qui parlent d'eux-mêmes. Chaque réalisation témoigne de notre engagement envers l'excellence.</p>
+      <p class="section-sub" style="margin:0 auto">Des projets qui parlent d'eux-mêmes. Chaque réalisation témoigne de notre engagement envers l'excellence.</p>
     </div>
     <div class="gallery-grid" role="list">
       <figure class="gallery-item" role="listitem" tabindex="0" aria-label="Refonte identité visuelle — Retail">
@@ -1364,62 +1328,43 @@
         <p class="testi-text">Élite Pro a transformé notre image de marque en quelques semaines. Le résultat dépasse toutes nos attentes — notre CA a augmenté de 40% en 6 mois.</p>
         <div class="testi-author">
           <div class="testi-avatar" aria-hidden="true">KM</div>
-          <div>
-            <p class="testi-name">Karim Maatouk</p>
-            <p class="testi-role">PDG, TechStart</p>
-          </div>
+          <div><p class="testi-name">Karim Maatouk</p><p class="testi-role">PDG, TechStart</p></div>
         </div>
       </article>
-
       <article class="testi-card reveal" role="listitem" style="transition-delay:.1s">
         <div class="stars" aria-label="5 étoiles sur 5">★★★★★</div>
         <div class="testi-quote" aria-hidden="true">"</div>
         <p class="testi-text">Un accompagnement d'une qualité rare. L'équipe a su comprendre nos besoins spécifiques et nous livrer une stratégie digitale performante.</p>
         <div class="testi-author">
           <div class="testi-avatar" aria-hidden="true">SB</div>
-          <div>
-            <p class="testi-name">Samira Benali</p>
-            <p class="testi-role">Directrice, Maison Dorée</p>
-          </div>
+          <div><p class="testi-name">Samira Benali</p><p class="testi-role">Directrice, Maison Dorée</p></div>
         </div>
       </article>
-
       <article class="testi-card reveal" role="listitem" style="transition-delay:.2s">
         <div class="stars" aria-label="5 étoiles sur 5">★★★★★</div>
         <div class="testi-quote" aria-hidden="true">"</div>
         <p class="testi-text">Le Pack Lancement PME a été un vrai game-changer. En moins de 3 mois, identité forte, site performant et vraie visibilité.</p>
         <div class="testi-author">
           <div class="testi-avatar" aria-hidden="true">YD</div>
-          <div>
-            <p class="testi-name">Youssef Daoud</p>
-            <p class="testi-role">Fondateur, Éditions Lumière</p>
-          </div>
+          <div><p class="testi-name">Youssef Daoud</p><p class="testi-role">Fondateur, Éditions Lumière</p></div>
         </div>
       </article>
-
       <article class="testi-card reveal" role="listitem" style="transition-delay:.3s">
         <div class="stars" aria-label="5 étoiles sur 5">★★★★★</div>
         <div class="testi-quote" aria-hidden="true">"</div>
         <p class="testi-text">Professionnalisme, créativité et réactivité. Ces trois mots résument parfaitement notre collaboration. Je recommande sans hésitation.</p>
         <div class="testi-author">
           <div class="testi-avatar" aria-hidden="true">NR</div>
-          <div>
-            <p class="testi-name">Nadia Remili</p>
-            <p class="testi-role">Gérante, Groupe Horizon</p>
-          </div>
+          <div><p class="testi-name">Nadia Remili</p><p class="testi-role">Gérante, Groupe Horizon</p></div>
         </div>
       </article>
-
       <article class="testi-card reveal" role="listitem" style="transition-delay:.4s">
         <div class="stars" aria-label="5 étoiles sur 5">★★★★★</div>
         <div class="testi-quote" aria-hidden="true">"</div>
         <p class="testi-text">Notre site génère 3× plus de leads. L'équipe a livré exactement ce qui était promis, dans les délais, avec une qualité irréprochable.</p>
         <div class="testi-author">
           <div class="testi-avatar" aria-hidden="true">AB</div>
-          <div>
-            <p class="testi-name">Amine Bouzid</p>
-            <p class="testi-role">CEO, InnovateTech</p>
-          </div>
+          <div><p class="testi-name">Amine Bouzid</p><p class="testi-role">CEO, InnovateTech</p></div>
         </div>
       </article>
     </div>
@@ -1452,7 +1397,7 @@
             <div class="contact-item-icon" aria-hidden="true">✉️</div>
             <div class="contact-item-text">
               <p class="label">Email</p>
-              <p class="val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0d606c7f6e787e687f6c79354d6a606c6461236e6260">[email&#160;protected]</a></p>
+              <p class="val">marcuserat8@gmail.com</p>
             </div>
           </div>
           <div class="contact-item">
@@ -1464,7 +1409,6 @@
           </div>
         </div>
       </div>
-
       <div class="contact-form reveal">
         <h3>Envoyez-nous un message</h3>
         <p class="form-sub">Réponse garantie sous 24h &nbsp;•&nbsp; Première consultation gratuite</p>
@@ -1504,9 +1448,7 @@
           </div>
           <div class="form-check">
             <input type="checkbox" id="c-rgpd" name="rgpd" required>
-            <label for="c-rgpd">
-              J'accepte que mes données soient utilisées pour traiter ma demande. <span style="color:var(--gold)">*</span>
-            </label>
+            <label for="c-rgpd">J'accepte que mes données soient utilisées pour traiter ma demande. <span style="color:var(--gold)">*</span></label>
           </div>
           <button type="submit" class="btn-form">
             <span>Envoyer via WhatsApp</span>
@@ -1553,36 +1495,38 @@
         </ul>
       </div>
     </div>
+
+    <!-- FOOTER BOTTOM : icônes sociales centrées en bas -->
     <div class="footer-bottom">
-  <p>© 2025 Élite Pro. Tous droits réservés.</p>
-  
-  <nav class="social-links" aria-label="Réseaux sociaux">
-    <a href="#" class="social-link" aria-label="LinkedIn">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/>
-        <circle cx="4" cy="4" r="2"/>
-      </svg>
-    </a>
-    <a href="#" class="social-link" aria-label="Instagram">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <rect x="2" y="2" width="20" height="20" rx="5"/>
-        <circle cx="12" cy="12" r="5"/>
-        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
-      </svg>
-    </a>
-    <a href="#" class="social-link" aria-label="Facebook">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-      </svg>
-    </a>
-    <a href="#" class="social-link" aria-label="WhatsApp">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.533 5.858L0 24l6.335-1.56A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.49-5.185-1.348l-.371-.22-3.762.925.97-3.67-.242-.378A9.944 9.944 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
-      </svg>
-    </a>
-  </nav>
-</div>
+      <nav class="social-links" aria-label="Réseaux sociaux">
+        <a href="#" class="social-link" aria-label="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect x="2" y="9" width="4" height="12"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+        <a href="#" class="social-link" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+        <a href="#" class="social-link" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+        </a>
+        <a href="#" class="social-link" aria-label="WhatsApp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.533 5.858L0 24l6.335-1.56A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.49-5.185-1.348l-.371-.22-3.762.925.97-3.67-.242-.378A9.944 9.944 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+          </svg>
+        </a>
+      </nav>
+      <p>© 2025 Élite Pro. Tous droits réservés.</p>
+    </div>
   </footer>
 
   <!-- MODAL COMMANDE -->
@@ -1617,6 +1561,8 @@
               <option value="ShowCase - Portfolio">ShowCase — Portfolio (26€)</option>
               <option value="ConvertX - Landing Ads">ConvertX — Landing Ads (30€)</option>
               <option value="ShopElite - Boutique">ShopElite — Boutique (69€)</option>
+              <option value="Boutique en Ligne Sur-Mesure">Boutique en Ligne Sur-Mesure (150€)</option>
+              <option value="Portfolio - Présentation Pro">Portfolio — Présentation Pro (49€)</option>
               <option value="Stratégie d'entreprise">Stratégie d'entreprise</option>
               <option value="Identité visuelle">Identité visuelle</option>
               <option value="Développement digital">Développement digital</option>
@@ -1632,9 +1578,7 @@
         </div>
         <div class="form-check">
           <input type="checkbox" id="o-rgpd" name="rgpd" required>
-          <label for="o-rgpd">
-            J'accepte d'être recontacté(e) et que mes informations soient traitées. <span style="color:var(--gold)">*</span>
-          </label>
+          <label for="o-rgpd">J'accepte d'être recontacté(e) et que mes informations soient traitées. <span style="color:var(--gold)">*</span></label>
         </div>
         <button type="submit" class="whatsapp-btn">
           <span class="wa-icon" aria-hidden="true">📲</span>
@@ -1648,10 +1592,7 @@
   <!-- TOAST -->
   <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    /* ============================================================
-       ⚙️ CONFIG — MODIFIEZ UNIQUEMENT ICI
-    ============================================================ */
+  <script>
     const CONFIG = {
       WA_NUMBER: '22940308792',
       BUSINESS_NAME: 'Élite Pro',
@@ -1659,9 +1600,6 @@
       STAT_CLIENTS: 250
     };
 
-    /* ============================================================
-       UTILS
-    ============================================================ */
     const $ = (s, ctx = document) => ctx.querySelector(s);
     const $$ = (s, ctx = document) => [...ctx.querySelectorAll(s)];
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1698,10 +1636,7 @@
     }
 
     function sendWA(text) {
-      window.open(
-        'https://wa.me/' + CONFIG.WA_NUMBER + '?text=' + encodeURIComponent(text),
-        '_blank', 'noopener,noreferrer'
-      );
+      window.open('https://wa.me/' + CONFIG.WA_NUMBER + '?text=' + encodeURIComponent(text), '_blank', 'noopener,noreferrer');
     }
 
     function validate(form) {
@@ -1725,82 +1660,62 @@
       return o;
     }
 
+    /* CORRIGÉ : goToOrder avec matching robuste */
     function goToOrder(productName, price) {
       orderModal.classList.add('open');
       document.body.style.overflow = 'hidden';
       const select = $('#o-service');
-      select.value = productName;
+      const opts = $$('option', select);
+      const match = opts.find(o => o.value === productName || o.value.includes(productName) || productName.includes(o.value));
+      if (match) select.value = match.value;
       setTimeout(() => {
         const fi = $('input:not([type=checkbox])', orderModal);
         if (fi) fi.focus();
       }, 300);
     }
 
-    /* ============================================================
-       CUSTOM CURSOR
-    ============================================================ */
+    /* CURSOR */
     if (window.matchMedia('(pointer: fine)').matches) {
       const cur = $('#cursor'), ring = $('#cursorRing');
       cur.style.display = ring.style.display = 'block';
       document.body.classList.add('cursor-active');
-
       let mx = 0, my = 0, rx = 0, ry = 0;
-
       document.addEventListener('mousemove', e => {
         mx = e.clientX; my = e.clientY;
         cur.style.left = mx + 'px'; cur.style.top = my + 'px';
       }, { passive: true });
-
       (function animRing() {
         rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
         ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
         requestAnimationFrame(animRing);
       })();
-
       document.addEventListener('mouseover', e => {
-        if (e.target.closest('a, button, [role="button"]')) {
-          cur.classList.add('active'); ring.classList.add('active');
-        }
+        if (e.target.closest('a, button, [role="button"]')) { cur.classList.add('active'); ring.classList.add('active'); }
       });
       document.addEventListener('mouseout', e => {
-        if (e.target.closest('a, button, [role="button"]')) {
-          cur.classList.remove('active'); ring.classList.remove('active');
-        }
+        if (e.target.closest('a, button, [role="button"]')) { cur.classList.remove('active'); ring.classList.remove('active'); }
       });
     }
 
-    /* ============================================================
-       NAV SCROLL
-    ============================================================ */
+    /* NAV SCROLL */
     const navbar = $('#navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 50);
     }, { passive: true });
 
-    /* ============================================================
-       HAMBURGER
-    ============================================================ */
+    /* HAMBURGER */
     const hamburger = $('#hamburger');
     const mobileMenu = $('#mobileMenu');
-
     function toggleMenu(open) {
       hamburger.classList.toggle('open', open);
       mobileMenu.classList.toggle('open', open);
       hamburger.setAttribute('aria-expanded', String(open));
       document.body.style.overflow = open ? 'hidden' : '';
     }
+    hamburger.addEventListener('click', () => toggleMenu(!mobileMenu.classList.contains('open')));
+    $$('.mobile-nav-link', mobileMenu).forEach(a => a.addEventListener('click', () => toggleMenu(false)));
 
-    hamburger.addEventListener('click', () => {
-      toggleMenu(!mobileMenu.classList.contains('open'));
-    });
-
-    $$('.mobile-nav-link', mobileMenu).forEach(a => {
-      a.addEventListener('click', () => toggleMenu(false));
-    });
-
-    /* ============================================================
-       SMOOTH SCROLL
-    ============================================================ */
+    /* SMOOTH SCROLL */
     $$('a[href^="#"]').forEach(link => {
       link.addEventListener('click', e => {
         const h = link.getAttribute('href');
@@ -1814,9 +1729,7 @@
       });
     });
 
-    /* ============================================================
-       INTERSECTION OBSERVER
-    ============================================================ */
+    /* INTERSECTION OBSERVER */
     if (!prefersReduced) {
       const obs = new IntersectionObserver(entries => {
         entries.forEach(e => {
@@ -1828,9 +1741,7 @@
       $$('.reveal').forEach(el => el.classList.add('visible'));
     }
 
-    /* ============================================================
-       COMPTEUR
-    ============================================================ */
+    /* COMPTEUR */
     const statEl = $('#stat-clients');
     const statObs = new IntersectionObserver(([e]) => {
       if (!e.isIntersecting) return;
@@ -1848,36 +1759,20 @@
     });
     statObs.observe(statEl);
 
-    /* ============================================================
-       TESTIMONIALS
-    ============================================================ */
+    /* TESTIMONIALS */
     const track = $('#testiTrack');
     const CARD_W = 340 + 24;
-    $('#testiNext').addEventListener('click', () => {
-      track.scrollBy({ left: CARD_W, behavior: 'smooth' });
-    });
-    $('#testiPrev').addEventListener('click', () => {
-      track.scrollBy({ left: -CARD_W, behavior: 'smooth' });
-    });
+    $('#testiNext').addEventListener('click', () => track.scrollBy({ left: CARD_W, behavior: 'smooth' }));
+    $('#testiPrev').addEventListener('click', () => track.scrollBy({ left: -CARD_W, behavior: 'smooth' }));
 
-    /* ============================================================
-       MODAL
-    ============================================================ */
+    /* MODAL */
     const orderModal = $('#orderModal');
-
     function closeModal() {
       orderModal.classList.remove('open');
       document.body.style.overflow = '';
     }
-
-    orderModal.addEventListener('click', e => {
-      if (e.target === orderModal) closeModal();
-    });
-
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && orderModal.classList.contains('open')) closeModal();
-    });
-
+    orderModal.addEventListener('click', e => { if (e.target === orderModal) closeModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && orderModal.classList.contains('open')) closeModal(); });
     $('#modalClose').addEventListener('click', closeModal);
 
     $$('.open-order-btn').forEach(btn => {
@@ -1907,9 +1802,7 @@
       });
     });
 
-    /* ============================================================
-       FORMULAIRE COMMANDE
-    ============================================================ */
+    /* FORMULAIRE COMMANDE */
     $('#orderForm').addEventListener('submit', async e => {
       e.preventDefault();
       const msgEl = $('#orderMsg');
@@ -1918,7 +1811,6 @@
         return;
       }
       const d = getFormData(e.target);
-      
       let pdfOk = false;
       try {
         const jsPDFLib = window.jspdf || window.jsPDF;
@@ -1929,29 +1821,22 @@
           doc.text('Élite Pro — Récapitulatif de commande', 10, 18);
           doc.setFont('helvetica', 'normal');
           doc.setFontSize(11);
-          doc.text(`Produit    : ${d.service}`, 10, 36);
-          doc.text(`Nom        : ${d.name}`, 10, 46);
-          doc.text(`WhatsApp   : ${d.phone}`, 10, 56);
-          if (d.email) doc.text(`Email      : ${d.email}`, 10, 66);
-          if (d.details) doc.text(`Projet     : ${d.details.substring(0, 50)}...`, 10, 76);
-          doc.save(`Commande_ElitePro_${d.name.replace(/\s/g,'_')}.pdf`);
+          doc.text('Produit    : ' + d.service, 10, 36);
+          doc.text('Nom        : ' + d.name, 10, 46);
+          doc.text('WhatsApp   : ' + d.phone, 10, 56);
+          if (d.email) doc.text('Email      : ' + d.email, 10, 66);
+          if (d.details) doc.text('Projet     : ' + d.details.substring(0, 50) + '...', 10, 76);
+          doc.save('Commande_ElitePro_' + d.name.replace(/\s/g,'_') + '.pdf');
           pdfOk = true;
         }
       } catch (err) { console.error(err); }
-
-      sendWA(buildWAText({
-        name: d.name, phone: d.phone, email: d.email,
-        service: d.service, details: d.details
-      }));
-      
+      sendWA(buildWAText({ name: d.name, phone: d.phone, email: d.email, service: d.service, details: d.details }));
       showToast(pdfOk ? '✅ PDF généré + WhatsApp ouvert' : '✅ WhatsApp s\'ouvre...');
       setTimeout(closeModal, 700);
       e.target.reset();
     });
 
-    /* ============================================================
-       FORMULAIRE CONTACT
-    ============================================================ */
+    /* FORMULAIRE CONTACT */
     $('#contactForm').addEventListener('submit', e => {
       e.preventDefault();
       const msgEl = $('#contactMsg');
@@ -1960,17 +1845,12 @@
         return;
       }
       const d = getFormData(e.target);
-      sendWA(buildWAText({
-        name: d.name, phone: d.phone, email: d.email,
-        service: d.service || 'Renseignement général', message: d.message
-      }));
+      sendWA(buildWAText({ name: d.name, phone: d.phone, email: d.email, service: d.service || 'Renseignement général', message: d.message }));
       showMsg(msgEl, 'success', '✅ WhatsApp s\'ouvre — cliquez sur Envoyer pour confirmer votre message !');
       e.target.reset();
     });
 
-    /* ============================================================
-       GALERIE
-    ============================================================ */
+    /* GALERIE */
     $$('.gallery-item').forEach(item => {
       item.addEventListener('keydown', e => {
         if (e.key === 'Enter' || e.key === ' ') {
@@ -1980,9 +1860,7 @@
       });
     });
 
-    /* ============================================================
-       RESET ERREURS
-    ============================================================ */
+    /* RESET ERREURS */
     $$('input, textarea, select').forEach(el => {
       el.addEventListener('focus', () => {
         el.style.borderColor = '';
@@ -1991,6 +1869,5 @@
       });
     });
   </script>
- 
 </body>
 </html>
